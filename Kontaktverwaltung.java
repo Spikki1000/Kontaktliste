@@ -24,11 +24,12 @@ public class Kontaktverwaltung
     
     public void loescheKontakt(String name)
     {
-        
+        kontaktliste.remove();
     }
     
     public Kontakt gibKontakt(String name)
     {
+        kontaktliste.getContent();
         return null;
     }
 }
