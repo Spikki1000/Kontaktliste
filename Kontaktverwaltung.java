@@ -36,7 +36,7 @@ public class Kontaktverwaltung
     
     public Kontakt gibKontakt(String name)
     {
-         kontaktliste.toFirst();
+        kontaktliste.toFirst();
         while (kontaktliste.hasAccess())
         {
             if (kontaktliste.getContent().gibName() == name)
@@ -53,5 +53,24 @@ public class Kontaktverwaltung
         return null;
     }
     
-    
+    public Kontakt aendereKontakt(String name, Kontakt k)
+    {
+        kontaktliste.toFirst();
+        while (kontaktliste.hasAccess())
+        {
+            if (kontaktliste.getContent().gibName() == name)
+            {
+                break;
+            }
+            kontaktliste.next();
+        }
+        
+        if (kontaktliste.hasAccess())
+        {
+            kontaktliste.getContent();
+            kontaktliste.remove();
+            kontaktliste.append(k);
+        }
+        return null;
+    }
 }
