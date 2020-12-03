@@ -10,23 +10,9 @@ public class Kontaktverwaltung
         kontaktliste = new List();
     }
 
-    public void neuerKontakt(Kontakt x)
+    public void neuerKontakt(Kontakt k)
     {
-        Kontakt gefunden = null;
-        kontaktliste.toFirst();
-        while (kontaktliste.hasAccess())
-        {
-            if (kontaktliste.getContent().gibName() == x)
-            {
-                break;
-            }
-            kontaktliste.next();
-        }
-        
-        if (kontaktliste.hasAccess())
-        {
-            kontaktliste.append(x);
-        }
+        kontaktliste.append(k);
     }
     
     public void loescheKontakt(String name)
@@ -66,4 +52,6 @@ public class Kontaktverwaltung
         }
         return null;
     }
+    
+    
 }
